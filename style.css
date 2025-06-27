@@ -32,7 +32,7 @@ body{
     /* line-height: 1.6; */
 }
 .container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
   /* padding: 0 20px; */
 }
@@ -205,26 +205,26 @@ body{
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
-    margin-top: 40px;
+    padding-top: 40px;
 }
 #about .personal-details {
     min-width: 45%;
     /* background-color: peru; */
     padding: 10px 0;
 }
+#about .details {
+    margin: 40px 0 0 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: space-between;
+}
 #about .personal-details h3{
     padding: 10px;
     text-align: center;
 }
-#about .details {
-    margin: 40px 0 0 0;
-    line-height: 1.6;
-}
 #about .details ul{
-    list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    list-style: none;
 } 
 
 #about .my-interests {
@@ -281,6 +281,13 @@ body{
     text-align: center;
     font-size: 30px;
     padding: 10px;
+}
+#skills .skills-items-one p {
+    text-align: center;
+    font-size: 20px;
+    text-align: justify;
+    padding: 20px 0;
+    line-height: 1.6;
 }
 #skills .skills-items-tow {
     display: flex;
@@ -457,4 +464,85 @@ body{
     text-align: center;
     font-size: 24px;
     text-transform: capitalize;
+}
+
+/* ====================== project section ===================== */
+#projects{
+    padding: 60px 0 50px 0;
+}
+#projects .project-title h2{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+}
+#projects .project-title p{
+    text-align: center;
+    font-size: 20px;
+    text-align: justify;
+    padding: 20px 0;
+    /* line-height: 1.2; */
+}
+#projects .card{
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+}
+#projects .card-item{
+    width: 350px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    /* border: solid 1px var(--text-color); */
+}
+#projects .card-item img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#projects .card-title{
+    padding-top: 5px;
+}
+#projects .card-title p{
+    padding: 5px 0;
+    text-align: justify;
+}
+#projects .use-tch {
+    display: inline-block;
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+}
+#projects .use-tch span{
+    padding: 5px 15px;
+    background-color: rgb(141, 141, 117);
+    border-radius: 20px;
+    color: rgb(238, 238, 3);
+}
+#projects .card-btn {
+    padding: 30px 0 0 0;
+    display: flex;
+    gap: 30px;
+}
+#projects .card-btn :first-child{
+    background-color: rgb(153, 153, 113);
+    color: rgb(238, 238, 3);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+#projects .card-btn :last-child{
+    text-decoration: none;
+    color: rgb(238, 238, 3);
+    text-transform: capitalize;
+    border: solid 1px var(--text-color);
+    text-align: center;
+    padding: 8px 16px;
+    border-radius: 6px;
 }
