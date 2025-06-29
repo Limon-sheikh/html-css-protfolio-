@@ -2,7 +2,7 @@
 /* ====================== common css ===================== */
 :root{
     --primary-color: #ffffff;
-    --secondary-color: #f4f4f4;
+    --secondary-color: #38352b;
     --background-color: #010003;
     --text-color: #ffe604;
     --font-family: 'Segoe UI', sans-serif;
@@ -33,7 +33,7 @@ body{
 }
 .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   /* padding: 0 20px; */
 }
 
@@ -229,7 +229,6 @@ body{
 
 #about .my-interests {
     width: 45%;
-    /* background-color: rgb(134, 104, 74); */
     padding: 10px 0;
 }
 #about .my-interests h3{
@@ -261,10 +260,7 @@ body{
 /* ====================== skills section ===================== */
 /* ====================== technical skills ===================== */
 #skills {
-    /* border: 1px solid var(--secondary-color); */
     width: 100%;
-    /* height: 740px; */
-    /* background-color: rgb(65, 100, 100); */
 }
 #skills .skills-container {
     width: 100%;
@@ -292,12 +288,10 @@ body{
 #skills .skills-items-tow {
     display: flex;
     justify-content: space-between;
-    /* text-transform: capitalize; */
     padding-top: 40px;
 }
 #skills .technical-skills {
     min-width: 45%;
-    /* background-color: peru; */
     padding: 10px 0;
     overflow: hidden;
 }
@@ -488,15 +482,13 @@ body{
     width: 100%;
     padding-top: 40px;
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
-    /* flex-direction: row; */
+    justify-content: space-between;
+    gap: 75px;
 }
 #projects .card-item{
-    width: 350px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    /* border: solid 1px var(--text-color); */
+    max-width: 350px;
+    padding: 10px;
 }
 #projects .card-item img{
     width: 100%;
@@ -506,17 +498,26 @@ body{
 #projects .card-title{
     padding-top: 5px;
 }
-#projects .card-title p{
-    padding: 5px 0;
+#projects .card-title .card-description{
+    margin-top: 10px;
     text-align: justify;
+    overflow-y: auto;
+    height: 80px;
+    scrollbar-width: none;
 }
-#projects .use-tch {
+#projects .card-title .card-description p{
+    width: 318px;
+}
+#projects .card-title .card-description:hover{
+    scrollbar-width: thin;
+}
+#projects .use-tech {
     display: inline-block;
     display: flex;
     gap: 20px;
-    padding-top: 15px;
+    padding-top: 30px;
 }
-#projects .use-tch span{
+#projects .use-tech span{
     padding: 5px 15px;
     background-color: rgb(141, 141, 117);
     border-radius: 20px;
@@ -545,4 +546,224 @@ body{
     text-align: center;
     padding: 8px 16px;
     border-radius: 6px;
+}
+/* ====================== services area ===================== */
+#services{
+    padding: 60px 0 50px 0;
+}
+#services .services-title h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#services .services-title p{
+    padding: 10px;
+    text-align: justify;
+}
+#services .service-grid{
+    display: flex;
+    padding: 50px 0 0 0;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+#services .service-card{
+    width: 350px;
+    background-color: #999781;
+    /* transition: transform 0.3s ease; */
+    padding: 10px;
+}
+#services .service-card .icon{
+    font-size: 50px;
+    text-align: center;
+}
+#services .service-card h2{
+    text-align: center;
+    padding-top: 20px;
+}
+#services .service-card p{
+    padding: 20px 0;
+    text-align: justify;
+}
+/* ====================== contact area ===================== */
+#contact{
+    padding: 60px 0 50px 0;
+}
+#contact .container h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+#contact .container> p{
+    text-align: justify;
+    padding: 20px;
+}
+.contact-grid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+/* contact information  */
+#contact .contact-info{
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    width: 50%;
+    padding: 10px;
+}
+#contact .contact-number{
+    display: flex;
+    gap: 50px;
+}
+#contact .contact-icon{
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    color: black;
+    cursor: pointer;
+}
+#contact .number{
+    padding: 5px;
+    width: 100%;
+}
+#contact .number span{
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#contact .number p{
+    padding: 10px 0 0 0;
+}
+/* contact form  */
+#contact .form-container{
+    width: 50%;
+    padding: 10px;
+}
+
+#contact .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+}
+
+#contact .form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfb002;
+    font-size: 16px;
+    transition: 0.3s ease;
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+#contact .form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--text-color);
+  outline: none;
+}
+#contact .form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+#contact button[type="submit"] {
+  background-color: #c4a705;
+  color: rgb(0, 0, 0);
+  padding: 14px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #dbbb05;
+}
+
+/* footer section  */
+.footer {
+    color: var(--text-color);
+    padding: 60px 20px 20px;
+    background-color: #38352b;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 250px;
+}
+
+.footer h3,
+.footer h4 {
+  margin-bottom: 15px;
+}
+/* .footer p{
+    text-align: justify;
+} */
+.footer a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.footer a:hover {
+  color: white !important;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-contact a {
+  color: white !important;
+}
+.footer-contact a:hover {
+    color: var(--text-color) !important;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bfff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid var(--text-color);
+  padding-top: 20px;
+  font-size: 13px;
+
 }
