@@ -1,10 +1,10 @@
 
 /* ====================== common css ===================== */
 :root{
-    --primary-color: #ffffff;
-    --secondary-color: #38352b;
-    --background-color: #010003;
-    --text-color: #ffe604;
+    --primary-color: #eed603e0;
+    --secondary-bg-color: #423e31;
+    --main-bg-color: rgb(3, 0, 10);
+    --hover-color: #ffe604;
     --font-family: 'Segoe UI', sans-serif;
 
     --progress-color-on: #ffe604;
@@ -27,14 +27,11 @@
 
 body{
     font-family: var(--font-family);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    /* line-height: 1.6; */
+    background-color: var(--main-bg-color);
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
 
 
@@ -44,12 +41,11 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    /* background-color: #076824; */
 }
 #header .navbar .logo {
     font-size: 24px;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--primary-color);
     cursor: pointer;
 }
 #header .navbar ul {
@@ -61,17 +57,17 @@ body{
 }
 #header .navbar ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
     font-size: 18px;
 }
 #header .navbar ul li a:hover {
-    color: var(--primary-color);
+    color: var(--hover-color);
 }
 #header .navbar button {
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     background-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
@@ -81,22 +77,20 @@ body{
     font-weight: bold;
 }
 #header .navbar button:hover {
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     color: var(--background-color);
 }
 
-/* ====================== hero section ===================== */
-/* ====================== left side ===================== */
+/* ====================== hero section start ===================== */
+/* left side content */
 #hero {
     /* min-height: calc(100vh - 90px); */
     height: 650px;
 }
 #hero .hero-container{
     height: 100%;
-    /* background-color: green; */
 }
 #hero .items {
-    /* border: 1px solid #e5a0a0; */
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -111,18 +105,20 @@ body{
     font-size: 90px;
     text-transform: uppercase;
     line-height: 1.2;
+    color: var(--primary-color);
 }
 #hero .items .left-side p {
     font-size: 30px;
     margin: 50px 0 80px 0;
     text-transform: capitalize;
+    color: var(--primary-color);
 }
-.btn{
+#hero .btn{
     font-size: 20px;
     margin-bottom: 18px;
     font-weight: bold;
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     background-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
@@ -131,16 +127,14 @@ body{
     margin-right: 30px;
 }
 #hero .items .left-side .btn:hover {
-    background-color: var(--text-color);
-    color: var(--background-color);
+    background-color: var(--primary-color);
+    color: var(--main-bg-color);
 }
 
-/* ====================== right side ===================== */
+/* right side content */
 #hero .items .right-side {
-    /* border: 1px solid #eee; */
     width: 50%;
     height: 100%;
-    /* background-color: peru; */
 }
 #hero .right-side .right-content {
     width: 100%;
@@ -152,7 +146,6 @@ body{
 #hero .items .right-side .image{
     width: 100%;
     height: 100%;
-    /* background-color: aquamarine; */
 }
 #hero .items .right-side img {
     width: 100%;
@@ -160,7 +153,6 @@ body{
     object-fit: cover;
 }
 #hero .items .social-icons {
-    /* border: 1px solid var(--text-color); */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -175,61 +167,65 @@ body{
     transition: color 0.3s ease;
 }
 #hero .items .social-icons i:hover {
-    color: var(--text-color);
+    color: var(--hover-color);
 }
 
-/* ====================== about section ===================== */
-/* ====================== about items one ===================== */
+/* ====================== about section start ===================== */
 #about {
-    /* border: 1px solid var(--secondary-color); */
     width: 100%;
     height: 740px;
     padding: 60px 0 0 0;
 }
-#about .about-items-one h2 {
+/* about title */
+#about .about-title h2 {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     font-size: 30px;
     padding: 10px;
+    color: var(--primary-color);
 }
-#about .about-items-one p {
+#about .about-title p {
     text-align: center;
     font-size: 20px;
     text-align: justify;
     padding: 20px 0;
     line-height: 1.6;
+    color: var(--primary-color);
 }
-#about .about-items-tow {
+#about .personal-details {
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
     padding-top: 40px;
 }
-#about .personal-details {
+/* details part one */
+#about .details-part-one {
     min-width: 45%;
-    /* background-color: peru; */
     padding: 10px 0;
 }
-#about .details {
+#about .details-part-one h3{
+    padding: 10px;
+    color: var(--primary-color);
+    text-align: center;
+}
+#about .details-container {
     margin: 40px 0 0 0;
+    color: var(--primary-color);
     line-height: 1.6;
     display: flex;
     justify-content: space-between;
 }
-#about .personal-details h3{
-    padding: 10px;
-    text-align: center;
-}
-#about .details ul{
+#about .details-container ul{
     padding: 0;
     list-style: none;
-} 
-
+}
+/* details part tow  */
 #about .my-interests {
     width: 45%;
     padding: 10px 0;
+    color: var(--primary-color);
 }
 #about .my-interests h3{
     text-align: center;
@@ -240,7 +236,6 @@ body{
     gap: 50px;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
 #about .my-interests .icon i {
     font-size: 24px;
@@ -250,15 +245,15 @@ body{
     text-align: center;
 }
 #about .my-interests .icon i:hover {
-    color: var(--text-color);
+    color: var(--hover-color);
 }
 #about .my-interests .lable {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-/* ====================== skills section ===================== */
-/* ====================== technical skills ===================== */
+/* ====================== skills section start ===================== */
+/*  technical skills */
 #skills {
     width: 100%;
 }
@@ -271,19 +266,21 @@ body{
     width: 100%;
     height: 100%;
 }
-#skills .skills-items-one h2 {
+#skills .skills-title h2 {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     font-size: 30px;
     padding: 10px;
+    color: var(--primary-color);
 }
-#skills .skills-items-one p {
+#skills .skills-title p {
     text-align: center;
     font-size: 20px;
     text-align: justify;
     padding: 20px 0;
     line-height: 1.6;
+    color: var(--primary-color);
 }
 #skills .skills-items-tow {
     display: flex;
@@ -300,6 +297,7 @@ body{
     text-align: center;
     font-size: 24px;
     text-transform: capitalize;
+    color: var(--primary-color);
 }
 
 #skills .progress-container {
@@ -363,7 +361,6 @@ body{
 #skills .html-dot{
     border: 7px solid var(--progress-color-on); 
 }
-
 #skills .css{
     background-color: var(--progress-color-tow);
     width: var(--css-width);
@@ -374,7 +371,6 @@ body{
 #skills .css .css-dot{
     border: 7px solid var(--progress-color-tow);
 }
-
 #skills .js{
     background-color: var(--progress-color-on);
     width: var(--js-width);
@@ -385,7 +381,6 @@ body{
 #skills .js .js-dot{
     border: 7px solid var(--progress-color-on);
 }
-
 #skills .react{
     background-color: var(--progress-color-tow);
     width: var(--react-width);
@@ -407,7 +402,6 @@ body{
 #skills .bootstrap .bootstrap-dot{
     border: 7px solid var(--progress-color-on);
 }
-
 #skills .tailwind{
     background-color: var(--progress-color-tow);
     width: var(--tailwind-width);
@@ -429,7 +423,6 @@ body{
 #skills .github .github-dot{
     border: 7px solid var(--progress-color-on);
 }
-
 #skills .photoshop{
     background-color: var(--progress-color-on);
     width: var(--photoshop-width);
@@ -441,12 +434,9 @@ body{
     border: 7px solid var(--progress-color-on);
 }
 
-
-/* ====================== professional skills ===================== */
-
+/* professional skills */
 #skills .professional-skills {
     min-width: 45%;
-    /* background-color: rgb(133, 108, 82); */
     padding: 10px 0;
 }
 #skills .prof-container {
@@ -458,9 +448,10 @@ body{
     text-align: center;
     font-size: 24px;
     text-transform: capitalize;
+    color: var(--primary-color);
 }
 
-/* ====================== project section ===================== */
+/* ====================== project section start ===================== */
 #projects{
     padding: 60px 0 50px 0;
 }
@@ -470,27 +461,29 @@ body{
     text-align: center;
     font-size: 30px;
     padding: 10px;
+    color: var(--primary-color);
 }
 #projects .project-title p{
     text-align: center;
     font-size: 20px;
     text-align: justify;
+    color: var(--primary-color);
     padding: 20px 0;
-    /* line-height: 1.2; */
 }
-#projects .card{
+#projects .card-conteinar{
     width: 100%;
+    color: var(--primary-color);
     padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 75px;
 }
-#projects .card-item{
+#projects .card{
     max-width: 350px;
     padding: 10px;
 }
-#projects .card-item img{
+#projects .card img{
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -518,10 +511,10 @@ body{
     padding-top: 30px;
 }
 #projects .use-tech span{
-    padding: 5px 15px;
-    background-color: rgb(141, 141, 117);
+    padding: 10px 15px;
+    background-color: var(--secondary-bg-color);
     border-radius: 20px;
-    color: rgb(238, 238, 3);
+    color: var(--primary-color);
 }
 #projects .card-btn {
     padding: 30px 0 0 0;
@@ -529,8 +522,8 @@ body{
     gap: 30px;
 }
 #projects .card-btn :first-child{
-    background-color: rgb(153, 153, 113);
-    color: rgb(238, 238, 3);
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-color);
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 6px;
@@ -538,16 +531,21 @@ body{
     font-weight: bold;
     text-transform: capitalize;
 }
-#projects .card-btn :last-child{
+#projects .card-btn > :last-child{
     text-decoration: none;
-    color: rgb(238, 238, 3);
+    color: var(--primary-color);
     text-transform: capitalize;
-    border: solid 1px var(--text-color);
+    border: solid 1px var(--primary-color);
     text-align: center;
     padding: 8px 16px;
     border-radius: 6px;
+    transition: 0.5s ease;
 }
-/* ====================== services area ===================== */
+#projects .card-btn > :last-child:hover{
+    color: black;
+    background-color: var(--primary-color);
+}
+/* ====================== services section start ===================== */
 #services{
     padding: 60px 0 50px 0;
 }
@@ -555,9 +553,11 @@ body{
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
+    color: var(--primary-color);
 }
 #services .services-title p{
     padding: 10px;
+    color: var(--primary-color);
     text-align: justify;
 }
 #services .service-grid{
@@ -570,8 +570,8 @@ body{
 }
 #services .service-card{
     width: 350px;
-    background-color: #999781;
-    /* transition: transform 0.3s ease; */
+    background-color: var(--secondary-bg-color);
+    border-radius: 8px;
     padding: 10px;
 }
 #services .service-card .icon{
@@ -580,17 +580,20 @@ body{
 }
 #services .service-card h2{
     text-align: center;
+    color: var(--primary-color);
     padding-top: 20px;
 }
 #services .service-card p{
     padding: 20px 0;
+    color: var(--primary-color);
     text-align: justify;
 }
-/* ====================== contact area ===================== */
+/* ====================== contact section start ===================== */
 #contact{
     padding: 60px 0 50px 0;
 }
 #contact .container h2{
+    color: var(--primary-color);
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
@@ -598,15 +601,17 @@ body{
 #contact .container> p{
     text-align: justify;
     padding: 20px;
+    color: var(--primary-color);
 }
 .contact-grid{
     display: flex;
+    color: var(--primary-color);
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 50px;
 }
-/* contact information  */
+/* contact info */
 #contact .contact-info{
     display: flex;
     gap: 50px;
@@ -625,7 +630,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: var(--text-color);
+    background-color: var(--primary-color);
     color: black;
     cursor: pointer;
 }
@@ -645,14 +650,12 @@ body{
     width: 50%;
     padding: 10px;
 }
-
 #contact .contact-form {
     display: flex;
     flex-direction: column;
     gap: 30px;
     text-align: left;
 }
-
 #contact .form-group input,
 .form-group textarea {
     width: 100%;
@@ -661,109 +664,88 @@ body{
     font-size: 16px;
     transition: 0.3s ease;
     background-color: transparent;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
-
 #contact .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--text-color);
+  border-color: var(--primary-color);
   outline: none;
 }
 #contact .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--text-color);
+  color: var(--primary-color);
   opacity: 0.6;
 }
-
 #contact button[type="submit"] {
-  background-color: #c4a705;
-  color: rgb(0, 0, 0);
+  background-color: var(--primary-color);
   padding: 14px 20px;
   border-radius: 8px;
-  border: none;
   font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
 }
-
 #contact button[type="submit"]:hover {
-  background-color: #dbbb05;
+  background-color: var(--hover-color);
+  color: var(--main-bg-color);
 }
 
-/* footer section  */
+/* ====================== footer section start ===================== */
 .footer {
-    color: var(--text-color);
+    color: var(--primary-color);
     padding: 60px 20px 20px;
-    background-color: #38352b;
+    background-color: var(--secondary-bg-color);
 }
-
 .footer-container {
-  display: flex;
+    display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .footer-about,
 .footer-links,
 .footer-contact {
   flex: 1 1 250px;
 }
-
 .footer h3,
 .footer h4 {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
-/* .footer p{
-    text-align: justify;
-} */
 .footer a {
   font-size: 14px;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--primary-color);
 }
-
 .footer a:hover {
-  color: white !important;
+    color: var(--hover-color);
 }
-
 .footer-links ul {
   list-style: none;
   padding: 0;
 }
-.footer-contact a {
-  color: white !important;
-}
-.footer-contact a:hover {
-    color: var(--text-color) !important;
-}
-
 .footer-links ul li {
   margin-bottom: 8px;
 }
-
 .social-icons {
   margin-top: 10px;
 }
-
 .social-icons a {
   display: inline-block;
   margin-right: 10px;
   font-size: 18px;
-  transition: color 0.3s;
+  transition: 0.3s ease;
 }
-
 .social-icons a:hover {
-  color: #00bfff;
+  color: var(--hover-color);
 }
-
 .footer-bottom {
-  text-align: center;
+    text-align: center;
   margin-top: 40px;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid var(--primary-color);
   padding-top: 20px;
   font-size: 13px;
 
 }
+/* ====================== The End ===================== */
