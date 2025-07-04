@@ -1,0 +1,291 @@
+/* common css  */
+:root{
+    --primary-color: #eed603e0;
+    --secondary-bg-color: #423e31;
+    --secondary-sub-bg-color: #504a37;
+    --main-bg-color: rgb(3, 0, 10);
+    --hover-color: #ffe604;
+    --font-family: 'Segoe UI', sans-serif;
+    
+    --progress-color-on: #ffe604;
+    --progress-color-tow: #c9b500;
+    --html-width: 90%;
+    --css-width: 80%;
+    --js-width: 70%;
+    --react-width: 60%;
+    --bootstrap-width: 80%;
+    --tailwind-width: 85%;
+    --github-width: 70%;
+    --photoshop-width: 60%;
+
+    /* mobile device font size */
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.125rem;
+    --h5-font-size: 1rem;
+    --h6-font-size: 0.875rem;
+    --p-font-size: 0.875rem;
+
+    /* line height  */
+    --line-height: 1.4;
+    --padding: 20px;
+  }
+
+
+  /* end  */
+  
+
+/*========== Styles for phones ========== */
+@media screen and (max-width: 768px) {
+/* header ara  */
+  #header .navbar {
+    padding: var(--padding);
+  }
+  #header .navbar .menu-icon{
+    display: block;
+  }
+  #header .navbar ul{
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    padding: 0 var(--padding);
+    background-color: var(--secondary-bg-color);
+  }
+  #header .navbar ul li{
+    margin: 10px 0;
+  }
+  #header .navbar ul li a{
+    background-color: var(--secondary-sub-bg-color);
+    padding: var(--padding);
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    font-size: var(--p-font-size);
+  }
+  /* Show menu when checkbox is checked */
+  #menu-checkbox:checked + .menu-icon + ul {
+    display: block;
+  }
+
+  /*========== hero section ========== */
+  #hero{
+    color: var(--primary-color);
+    width: 100vw;
+  }
+  #hero .items {
+    display: block;
+    width: 100vw;
+    padding: var(--padding);
+  }
+  #hero .items .left-side{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+  #hero .items .left-side h1 {
+    font-size: var(--h1-font-size);
+    text-transform: uppercase;
+    line-height: var(--line-height);
+  }
+  #hero .items .left-side h3 {
+    font-size: var(--h3-font-size);
+    margin: 50px 0 80px 0;
+    text-transform: capitalize;
+  }
+  /* right side  */
+  #hero .items .right-side{
+    display: none;
+  }
+  #hero .items .right-side img {
+    display: none;
+  }
+  
+  /*========== about section ========== */
+  #about {
+    width: 100%;
+    height: 740px;
+    padding: 60px 0 0 0;
+  }
+  #about .about-title h2 {
+    font-size: var(--h3-font-size);
+  }
+  #about .about-title p {
+    font-size: var(--p-font-size);
+    padding: var(--padding);
+    line-height: var(--line-height);
+    color: var(--primary-color);
+  }
+  #about .personal-details {
+    display: block;
+    padding-top: 0;
+  }
+  /* details part one */
+  #about .details-part-one {
+    width: 100%;
+    padding: 0;
+  }
+  #about .details-part-one h3{
+    font-size: var(--h4-font-size);
+  }
+  #about .details-container {
+    line-height: var(--line-height);
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    margin: 0;
+  }
+  /* details part tow */
+  #about {
+    height: auto;
+  }
+  #about .my-interests {
+    width: 100%;
+    padding: var(--padding);
+  }
+  #about .my-interests h3{
+    font-size: var(--h4-font-size);
+  }
+  #about .my-interests .icon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: var(--p-font-size);
+  }
+  
+  /*========== skills section ========== */
+  /* technical skills */
+  #skills .skills-content {
+    padding: 0 var(--padding);
+  }
+  #skills .skills-title h2 {
+    font-size: var(--h2-font-size);
+  }
+  #skills .skills-title p {
+    line-height: var(--line-height);
+    font-size: var(--p-font-size);
+  }
+  #skills .skills-items-tow {
+    display: block;
+    padding-top: 0;
+  }
+  #skills .technical-skills h3 {
+    padding: 0;
+    font-size: var(--h3-font-size);
+  }
+  #skills .progress-container {
+    margin-top: 20px;
+    font-size: var(--p-font-size);
+  }
+  #skills .technical-skills {
+    width: 100%;
+  }
+  /* professional skills */
+  #skills .professional-skills {
+    width: 100%;
+    margin-top: 40px;
+  }
+  #skills .prof-container h3 {
+    font-size: var(--h3-font-size);
+    padding: 0;
+  }
+
+  /*========== project section ========== */
+  #projects .project-title h2{
+    font-size: var(--h2-font-size);
+    padding: 0;
+    color: var(--primary-color);
+  }
+  #projects .project-title p{
+    font-size: var(--p-font-size);
+    padding: var(--padding);
+  }
+  #projects .card-conteinar{
+    padding: var(--padding);
+  }
+  #projects .card{
+    width: 100%;
+  }
+  #projects .card-title h3{
+    font-size: var(--h3-font-size);
+  }
+  #projects .card-description p{
+    width: 100%;
+    font-size: var(--p-font-size);
+  }
+  #projects .use-tech {
+    font-size: var(--p-font-size);
+  }
+
+  /*========== service section ========== */
+  #services .services-title h2{
+    font-size: var(--h2-font-size);
+  }
+  #services .services-title p{
+    padding: var(--padding);
+    font-size: var(--p-font-size);
+  }
+  #services .service-grid{
+    display: block;
+    padding: 0 var(--padding);
+  }
+  #services .service-card{
+    margin: 20px 0;
+    width: 100%;
+    padding: var(--padding);
+  }
+  #services .service-card h2{
+    font-size: var(--h3-font-size);
+  }
+  #services .service-card p{
+    font-size: var(--p-font-size);
+    padding: 20px 0;
+    color: var(--primary-color);
+    text-align: justify;
+  }
+
+  /*========== contact section ========== */
+  #contact .container h2{
+    font-size: var(--h2-font-size);
+  }
+  #contact .container> p{
+    font-size: var(--p-font-size);
+    padding: var(--padding);
+  }
+  .contact-grid{
+    margin: 0;
+    padding: var(--padding);
+  }
+  #contact .contact-info{
+    display: block;
+    width: 100%;
+  }
+  #contact .form-container{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+/* end  */
+
+
+
+
+
+
+/* ✅ Large devices (Tablets - Landscape, Small Laptops) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Styles for tablets (landscape) and small laptops */
+}
+
+/* ✅ Extra Large devices (Desktops) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Styles for desktops */
+}
+
+/* ✅ Ultra Wide screens (Large Desktops & TVs) */
+@media screen and (min-width: 1201px) {
+  /* Styles for large desktops / ultra wide screens */
+}

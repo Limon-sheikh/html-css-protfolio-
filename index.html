@@ -6,6 +6,8 @@
   <title>Limon Sheikh - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="responsive.css">
+  
 </head>
 <body>
     <!-- header area -->
@@ -14,6 +16,8 @@
             <!-- navber -->
             <nav class="navbar">
                 <div class="logo"><h1>Web Roots</h1></div>
+                <input type="checkbox" id="menu-checkbox" />
+                <label for="menu-checkbox" class="menu-icon">&#9776;</label>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">About</a></li>
@@ -22,7 +26,9 @@
                     <li><a href="">Services</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
-                <button>Hire Me</button>
+                <div class="hire-me">
+                    <button>Hire Me</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -35,8 +41,8 @@
                     <!-- left side content  -->
                     <div class="left-side">
                         <div class="left-content">
-                             <h1>Hello, <br> I'm Limon <br> sheikh</h1>
-                            <p>a passonat <strong>front-end Developer</strong></p>
+                            <h1>Hello, <br> I'm Limon <br> sheikh</h1>
+                            <h3>a passonat <strong>front-end Developer</strong></h3>
                             <button class="btn">Learn More</button>
                             <button class="btn">Downlod cv <span>
                                 <i class="fa-solid fa-download"></i></span>
@@ -49,20 +55,22 @@
                             <div class="image">
                                 <img src="./img/limon.png" alt="hero image">
                             </div>
-                            <div class="social-icons">
-                                <i class="fa-brands fa-github"></i>
-                                <i class="fa-brands fa-linkedin"></i>
-                                <i class="fa-brands fa-instagram"></i>
-                                <i class="fa-brands fa-twitter"></i>
-                                <i class="fa-brands fa-facebook"></i>
-                                <i class="fa-brands fa-youtube"></i>
+                            <div class="hero-social-icons">
+                                <div>
+                                    <i class="fa-brands fa-github"></i>
+                                    <i class="fa-brands fa-linkedin"></i>
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <i class="fa-brands fa-twitter"></i>
+                                    <i class="fa-brands fa-facebook"></i>
+                                    <i class="fa-brands fa-youtube"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+<hr>
         <!-- about section start  -->
         <section id="about">
             <div class="container about-container">
@@ -100,7 +108,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- details part tow  -->
+                        <!-- details part tow -->
                         <div class="my-interests">
                             <h3>my interests</h3>
                             <div class="icon">
@@ -376,7 +384,7 @@
                     <div class="card">
                         <img src="/img/Screenshot 1.png" alt="project image">
                         <div class="card-title">
-                            <h2>IT Services Website</h2>
+                            <h3>IT Services Website</h3>
                             <div class="card-description">
                                 <p>This is a modern and responsive IT Services website built to showcase various technology solutions such as web development, software services, cloud support, and IT consultancy. I designed and developed this project using clean and semantic HTML, Tailwind CSS, and React.js. The site reflects a professional layout with user-friendly navigation and service-focused sections, suitable for real-world IT companies.</p>
                             </div>
@@ -396,7 +404,7 @@
                     <div class="card">
                         <img src="/img/fb login page.png" alt="project image">
                         <div class="card-title">
-                            <h2>Facebook login page</h2>
+                            <h3>Facebook login page</h3>
                             <div class="card-description">
                                 <p>A simple and responsive Facebook Login Page clone built using HTML, Tailwind CSS and React.js. This design replicates the original Facebook login interface for learning and UI/UX practice purposes. It was built with attention to layout accuracy, visual consistency, and mobile responsiveness, making it a perfect frontend practice project for UI/UX improvement.</p>
                             </div>
@@ -416,7 +424,7 @@
                     <div class="card">
                         <img src="/img/protfolio.png" alt="project image">
                         <div class="card-title">
-                            <h2>Protfolio Website</h2>
+                            <h3>Protfolio Website</h3>
                             <div class="card-description">
                                 <p>This is a fully responsive and modern portfolio website created to showcase my skills, projects, and services as a Front-End Web Developer. It features a clean design, smooth navigation, and well-organized sections including About Me, My Services, Projects, and Contact. The website is built using HTML5, CSS3, JavaScript (and Tailwind CSS/React if used), and reflects my ability to create real-world, user-friendly web interfaces.</p>
                             </div>
@@ -436,7 +444,7 @@
                     <div class="card">
                         <img src="/img/card-design.png" alt="project image">
                         <div class="card-title">
-                            <h2>Business Card UI Design</h2>
+                            <h3>Business Card UI Design</h3>
                             <div class="card-description">
                                 <p>This is a modern and responsive business card UI design inspired by an online reference. I developed the component using HTML, CSS and React.js, focusing on clean layout, visual hierarchy, and responsive structure. The design represents a personal/corporate identity section that could be used in websites, portfolios, or digital business profiles. It showcases my skills in component-based frontend development and responsive design using utility-first CSS.</p>
                             </div>
@@ -455,7 +463,7 @@
             </div>
         </section>
 
-        <!-- services area -->
+        <!-- services section -->
         <section id="services">
             <div class="container">
                 <div class="item-container">
