@@ -1,22 +1,13 @@
 
 /* ====================== common css ===================== */
 :root{
-    --primary-bg-color: #af8f25;
-    --secondary-bg-color: #b19951;
+    /* --primary-bg-color: rgb(81, 74, 57); */
+    --primary-bg-color: #504a39;
+    --bg-color: #635c41;
     --text-color: #eed603e0;
     --hover-color: #ffe604;
     --font-family: 'Segoe UI', sans-serif;
-
-    --progress-color-on: #ffe604;
-    --progress-color-tow: #c9b500;
-    --html-width: 90%;
-    --css-width: 80%;
-    --js-width: 70%;
-    --react-width: 60%;
-    --bootstrap-width: 80%;
-    --tailwind-width: 85%;
-    --github-width: 70%;
-    --photoshop-width: 60%;
+    --font-size: 1.063rem;
 }
 
 /* computer device font size */
@@ -25,8 +16,8 @@ h2 { font-size: 2rem;   /* ≈32px */ }
 h3 { font-size: 1.75rem; /* ≈28px */ }
 h4 { font-size: 1.5rem; /* ≈24px */ }
 h5 { font-size: 1.25rem; /* ≈20px */ }
-p { font-size: 1rem;    /* ≈16px */ }
-
+h6 { font-size: 1.125rem; /* ≈18px */ }
+p { font-size: 1.063rem;    /* ≈17px */ }
 
 *{
     box-sizing: border-box;
@@ -36,13 +27,9 @@ p { font-size: 1rem;    /* ≈16px */ }
 
 body{
     font-family: var(--font-family);
-    /* color: var(--text-color); */
+    color: var(--text-color);
     background-color: var(--primary-bg-color);
-    /* background-color: #423e31c9; */
-    font-size: 1rem;
-}
-main{
-    /* background-color: red; */
+    font-size: 1.063rem;
 }
 .container {
   max-width: 1200px;
@@ -55,26 +42,25 @@ h2 {
     font-weight: bold;
     text-align: center;
     padding: 20px 0;
-    color: var(--primary-color);
+}
+h5 {
+    text-align: center;
 }
 p {
     text-align: justify;
     line-height: 1.3;
-    color: var(--primary-color);
+    
 }
 a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-a:hover {
-  color: var(--hover-color);
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 /* ====================== header area ===================== */
   #header {
     width: 100%;
-    background-color: var(--secondary-bg-color);
-  }
+    background-color: var(--bg-color);
+}
 #header .navbar {
     display: flex;
     justify-content: space-between;
@@ -127,33 +113,31 @@ a:hover {
 
 /* ====================== hero section start ===================== */
 /* left side content */
-#hero .items {
-    width: 100%;
-    height: 100%;
+#hero .hero-items-container {
+    /* width: 100%;
+    height: 100%; */
     margin: 10px 0 0 0;
     display: flex;
     justify-content: space-between;
-    /* background-color: aquamarine; */
 }
-#hero .items .left-side .left-content{
+#hero .left-content{
     height: 100%;
     width: 100%;
-    /* background-color: red; */
 }
-#hero .items .left-side h1 {
+#hero .left-side h1 {
     padding-top: 80px;
-    font-size: 90px;
+    font-size: 80px;
     text-transform: uppercase;
     line-height: 1.2;
 }
-#hero .items .left-side h3 {
+#hero .left-side h3 {
     font-size: 30px;
     margin: 50px 0 80px 0;
     text-transform: capitalize;
 }
 #hero .btn{
-    font-size: 20px;
-    margin-bottom: 18px;
+    color: var(--text-color);
+    font-size: 1.125rem;
     font-weight: bold;
     border: 1px solid var(--text-color);
     background-color: transparent;
@@ -161,9 +145,9 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    margin-right: 30px;
+    margin-right: 20px;
 }
-#hero .items .left-side .btn:hover {
+#hero .left-side .btn:hover {
     background-color: var(--hover-color);
     color: black;
 }
@@ -176,31 +160,39 @@ a:hover {
 #hero .right-side .image{
     width: 100%;
     height: 700px;
-    /* background-color: rebeccapurple; */
-    overflow: hidden;
+    position: relative;
 }
 #hero .image img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-#hero .items .hero-social-icons{
+#hero .image .fade-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgb(81, 74, 57), transparent);
+    pointer-events: none;
+}
+#hero .hero-social-icons{
     /* background-color: blue; */
     display: flex;
     align-items: center;
 }
-#hero .items .hero-social-icons > div {
+#hero .hero-social-icons > div {
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 20px;
 }
-#hero .items .hero-social-icons i {
+#hero .hero-social-icons i {
     font-size: 30px;
     cursor: pointer;
     transition: color 0.3s ease;
 }
-#hero .items .hero-social-icons i:hover {
+#hero .hero-social-icons i:hover {
     color: var(--hover-color);
 }
 
@@ -222,12 +214,10 @@ a:hover {
     min-width: 45%;
     padding: 10px 0;
 }
-#about .details-part-one h3{
-    text-align: center;
-}
 #about .details-container {
     margin: 20px 0 0 0;
     line-height: 1.6;
+    font-size: var(--font-size);
     display: flex;
     justify-content: space-between;
 }
@@ -240,18 +230,17 @@ a:hover {
     width: 45%;
     padding: 10px 0;
 }
-#about .my-interests h3{
-    text-align: center;
-}
+
 #about .my-interests .icon {
     padding: 20px 0 0 0;
     display: flex;
     gap: 50px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    font-size: var(--font-size);
 }
 #about .my-interests .icon i {
-    font-size: 24px;
+    font-size: var(--font-size);
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
@@ -269,28 +258,25 @@ a:hover {
 #skills .skills-content {
     margin: 60px 0 0 0;
 }
-#skills .skills-items-tow {
+#skills .tech-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 40px;
+    padding-top: 30px;
+    font-size: var(--font-size);
 }
 #skills .technical-skills {
     min-width: 50%;
 }
-#skills .technical-skills h3 {
-    text-align: center;
-    font-size: 24px;
-    text-transform: capitalize;
-}
 #skills .progress-container {
-    font-weight: bold;
     width: 100%;
     margin-top: 10px;
+    padding: 6px;
     overflow: hidden;
+    font-size: var(--font-size);
 }
-#skills .skills-items-tow .progress-bar {
+#skills .progress-bar {
     width: 100%;
-    height: 10px;
+    height: 6px;
     background-color: #e0e0e0;
     border-radius: 50px;
     position: relative;
@@ -304,39 +290,22 @@ a:hover {
     align-items: center;
     justify-content: space-between;
 }
-#skills .progress-bar .dot {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    left: 100%;
-    top: 50%;
-    transform: translate(-100%, -50%);
-}
 #skills .progress .progress-dot {
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     background-color: #ffffff;
     border-radius: 50%;
 }
 #skills .progress .progress-dot-value {
-    width: 70px;
-    height: 30px;
+    padding: 0 10px;
     background-color: #ffffff;
     border-radius: 20px;
     color: black;
-    position: relative;
-}
-#skills .progress .progress-dot-value span{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    font-size: var(--font-size);
 }
 #skills .html{
     background-color: var(--progress-color-on);
-    width: var(--html-width);
+    width: 80%;
 }
 #skills .html .html-value {
     border: 3px solid var(--progress-color-on);
@@ -344,79 +313,6 @@ a:hover {
 #skills .html-dot{
     border: 7px solid var(--progress-color-on); 
 }
-#skills .css{
-    background-color: var(--progress-color-tow);
-    width: var(--css-width);
-}
-#skills .css .css-value{
-    border: 3px solid var(--progress-color-tow);
-}
-#skills .css .css-dot{
-    border: 7px solid var(--progress-color-tow);
-}
-#skills .js{
-    background-color: var(--progress-color-on);
-    width: var(--js-width);
-}
-#skills .js .js-value{
-    border: 3px solid var(--progress-color-on);
-}
-#skills .js .js-dot{
-    border: 7px solid var(--progress-color-on);
-}
-#skills .react{
-    background-color: var(--progress-color-tow);
-    width: var(--react-width);
-}
-#skills .react .react-value{
-    border: 3px solid var(--progress-color-tow);
-}
-#skills .react .react-dot{
-    border: 7px solid var(--progress-color-tow);
-}
-
-#skills .bootstrap{
-    background-color: var(--progress-color-on);
-    width: var(--bootstrap-width);
-}
-#skills .bootstrap .bootstrap-value{
-    border: 3px solid var(--progress-color-on);
-}
-#skills .bootstrap .bootstrap-dot{
-    border: 7px solid var(--progress-color-on);
-}
-#skills .tailwind{
-    background-color: var(--progress-color-tow);
-    width: var(--tailwind-width);
-}
-#skills .tailwind .tailwind-value{
-    border: 3px solid var(--progress-color-tow);
-}
-#skills .tailwind .tailwind-dot{
-    border: 7px solid var(--progress-color-tow);
-}
-
-#skills .github{
-    background-color: var(--progress-color-on);
-    width: var(--github-width);
-}
-#skills .github .github-value{
-    border: 3px solid var(--progress-color-on);
-}
-#skills .github .github-dot{
-    border: 7px solid var(--progress-color-on);
-}
-#skills .photoshop{
-    background-color: var(--progress-color-on);
-    width: var(--photoshop-width);
-}
-#skills .photoshop .photoshop-value{
-    border: 3px solid var(--progress-color-on);
-}
-#skills .photoshop .photoshop-dot{
-    border: 7px solid var(--progress-color-on);
-}
-
 /* professional skills */
 #skills .professional-skills {
     min-width: 45%;
@@ -425,30 +321,30 @@ a:hover {
     width: 100%;
     height: 100%;
 }
-#skills .prof-container h3 {
-    text-align: center;
-    font-size: 24px;
-    text-transform: capitalize;
-}
 
 /* ====================== project section start ===================== */
 #projects{
     padding: 60px 0 0 0;
 }
 #projects .card-conteinar{
-    color: var(--primary-color);
     padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 30px;
+    row-gap: 40px;
 }
 #projects .card{
     padding: 20px;
-    width: 380px;
+    width: 360px;
     overflow: hidden;
     border-radius: 10px;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--bg-color);
+}
+#projects .card-btn {
+    padding: 30px 0 0 0;
+    display: flex;
+    gap: 30px;
+    font-weight: bold;
 }
 #projects .card img{
     width: 100%;
@@ -465,7 +361,7 @@ a:hover {
     scrollbar-width: thin;
 }
 #projects .card-description p{
-    width: 328px;
+    width: 98%;
 }
 #projects .use-tech {
     display: inline-block;
@@ -474,32 +370,25 @@ a:hover {
     padding-top: 30px;
 }
 #projects .use-tech span{
-    padding: 10px 15px;
-    background-color: var(--secondary-bg-color);
+    padding: 10px 20px;
+    background-color: var(--primary-bg-color);
     border-radius: 20px;
-    color: var(--primary-color);
+    text-align: center;
 }
-#projects .card-btn {
-    padding: 30px 0 0 0;
-    display: flex;
-    gap: 30px;
-    font-weight: bold;
-}
-#projects .card-btn :first-child{
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-color);
+#projects .card-btn a:first-child{
+    background-color: var(--primary-bg-color);
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 6px;
     transition: 0.3s;
     text-transform: capitalize;
 }
-#projects .card-btn > :first-child:hover{
+#projects .card-btn a:first-child:hover{
     background-color: var(--hover-color);
+    color: black;
 }
-#projects .card-btn > :last-child{
+#projects .card-btn a:last-child{
     text-decoration: none;
-    color: var(--primary-color);
     text-transform: capitalize;
     border: solid 1px var(--text-color);
     text-align: center;
@@ -507,7 +396,7 @@ a:hover {
     border-radius: 6px;
     transition: 0.5s ease;
 }
-#projects .card-btn > :last-child:hover{
+#projects .card-btn a:last-child:hover{
     color: black;
     background-color: var(--hover-color);
 }
@@ -517,18 +406,18 @@ a:hover {
     padding: 60px 0 0 0;
 }
 #services .service-grid{
-    display: flex;
     padding: 50px 0 0 0;
+    display: flex;
     justify-content: space-between;
-    gap: 50px;
     flex-wrap: wrap;
+    row-gap: 30px;
     text-align: center;
 }
 #services .service-card{
-    width: 350px;
-    background-color: var(--secondary-bg-color);
+    width: 360px;
     border-radius: 8px;
     padding: 20px;
+    background-color: var(--bg-color);
 }
 #services .service-card .icon{
     font-size: 50px;
@@ -552,90 +441,91 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    min-height: 600px;
 }
 /* contact info */
-#contact .contact-info{
-    display: flex;
-    gap: 50px;
-    flex-direction: column;
-    width: 50%;
+#contact .map-container{
+    text-align: center;
+    width: 45%;             
+    height: 550px;
 }
-#contact .contact-number{
-    display: flex;
-    gap: 50px;
-}
-#contact .contact-icon{
-    width: 50px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: var(--secondary-bg-color);
-    color: black;
-    cursor: pointer;
-}
-#contact .number{
-    padding: 5px;
+#contact .map-container iframe{
     width: 100%;
-}
-#contact .number span{
-    text-transform: capitalize;
-    font-weight: bold;
-}
-#contact .number p{
-    padding: 10px 0 0 0;
+    height: 100%;
+    border: 0;
+    display: inline-block;
+    border-radius: 10px;
 }
 /* contact form  */
 #contact .form-container{
-    width: 50%;
+    width: 45%;
+    height: 550px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#contact .message-icon{
+    font-size: 40px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: var(--primary-bg-color);
 }
 #contact .contact-form {
+    padding: 30px 20px 20px 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    border-radius: 10px;
     text-align: left;
 }
 #contact .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #a0893dce;
-    font-size: 16px;
+    border: 1px solid #dbb22bce;
+    font-size: var(--font-size);
     transition: 0.3s ease;
     background-color: transparent;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 #contact .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--hover-color);
-  outline: none;
+    border-color: var(--hover-color);
+    outline: none;
 }
 #contact .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: var(--primary-color);
   opacity: 0.6;
+  color: var(--text-color);
 }
 #contact button[type="submit"] {
-  background-color: var(--primary-color);
-  padding: 14px 20px;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-  color: var(--main-bg-color);
-  border: none;
+    margin: 20px 0 0 0;
+    padding: 14px 20px;
+    font-size: var(--font-size);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    border: none;
+    color: var(--text-color);
+    background-color: var(--primary-bg-color);
 }
 #contact button[type="submit"]:hover {
-  background-color: var(--hover-color);
+    background-color: var(--hover-color);
+    color: black;
 }
 
 /* ====================== footer section start ===================== */
 .footer {
-    color: var(--text-color);
     padding: 60px 20px 20px;
-    background-color: var(--secondary-bg-color);
+    background-color: var(--bg-color);
 }
 .footer-container {
     display: flex;
@@ -648,8 +538,7 @@ a:hover {
 .footer-contact {
     flex: 1 1 250px;
 }
-.footer h3,
-.footer h4 {
+.footer h6 {
     margin-bottom: 15px;
 }
 .footer-links ul {
@@ -659,21 +548,18 @@ a:hover {
 .footer-links ul li {
     margin-bottom: 8px;
 }
-.social-icons {
-    margin-top: 10px;
-}
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 18px;
-    transition: 0.3s ease;
+.footer-contact .call{
+    display: flex;
+    gap: 10px;
+    font-size: var(--font-size);
+    margin: 0 0 10px 0 ;
 }
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
     border-top: 1px solid var(--text-color);
     padding-top: 20px;
-    font-size: 13px;
+    font-size: var(--font-size);
 
 }
 .footer-bottom > p{

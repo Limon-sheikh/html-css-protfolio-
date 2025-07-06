@@ -9,7 +9,7 @@
     
     --progress-color-on: #ffe604;
     --progress-color-tow: #c9b500;
-    --html-width: 90%;
+    --html-width: 80%;
     --css-width: 80%;
     --js-width: 70%;
     --react-width: 60%;
@@ -48,7 +48,7 @@
   #header .navbar ul{
     display: none;
     position: absolute;
-    top: 90px;
+    top: 80px;
     left: 0;
     width: 100%;
     padding: 0 var(--padding);
@@ -168,7 +168,7 @@
     line-height: var(--line-height);
     font-size: var(--p-font-size);
   }
-  #skills .skills-items-tow {
+  #skills .tech-container {
     display: block;
     padding-top: 0;
   }
@@ -255,6 +255,9 @@
     font-size: var(--p-font-size);
     padding: var(--padding);
   }
+  #contact .map-container{
+    width: 100%;
+}
   .contact-grid{
     margin: 0;
     padding: var(--padding);

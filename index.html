@@ -37,7 +37,7 @@
         <!-- hero section start  -->
         <section id="hero">
             <div class="container">
-                <div class="items">
+                <div class="hero-items-container">
                     <!-- left side content  -->
                     <div class="left-side">
                         <div class="left-content">
@@ -54,6 +54,7 @@
                         <div class="right-content">
                             <div class="image">
                                 <img src="./img/limon.png" alt="hero image">
+                                <div class="fade-overlay"></div>
                             </div>
                             <div class="hero-social-icons">
                                 <div>
@@ -84,16 +85,16 @@
                     <div class="personal-details">
                         <!-- details part one  -->
                         <div class="details-part-one">
-                            <h3>personal details</h3>
+                            <h5>personal details</h5>
                             <div class="details-container">
                                 <div class="list-one">
                                     <ul>
-                                        <li><strong>Name</strong></li>
-                                        <li><strong>Phone</strong></li>
-                                        <li><strong>E-mail</strong></li>
-                                        <li><strong>Address</strong></li>
-                                        <li><strong>Birthdate</strong></li>
-                                        <li><strong>Job Status</strong></li>
+                                        <li>Name</li>
+                                        <li>phone</li>
+                                        <li>E-mail</li>
+                                        <li>Address</li>
+                                        <li>Birthdate</li>
+                                        <li>Job Status</li>
                                     </ul>
                                 </div>
                                 <div class="list-two"> 
@@ -110,7 +111,7 @@
                         </div>
                         <!-- details part tow -->
                         <div class="my-interests">
-                            <h3>my interests</h3>
+                            <h5>my interests</h5>
                             <div class="icon">
                                 <div class="lable">
                                     <i class="fa-solid fa-code"></i>
@@ -165,17 +166,16 @@
                             I have honed my skills in various front-end technologies, including HTML, CSS, JavaScript, and frameworks like React. My expertise lies in creating responsive designs and ensuring cross-browser compatibility. I am also familiar with version control systems like Git and have experience working with RESTful APIs.
                         </p>
                     </div>
-                    <div class="skills-items-tow">
+                    <div class="tech-container">
                         <div class="technical-skills">
-                            <h3>Technical Skills</h3>
+                            <h5>Technical Skills</h5>
                             <div class="progress-container">
                                 <div>HTML</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
                                     <div class="progress html">
                                         <div class="progress-dot html-dot"></div>
                                         <div class="progress-dot-value html-value">
-                                            <span>90%</span>
+                                            <span>80%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -183,10 +183,9 @@
                             <div class="progress-container">
                                 <div>CSS</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress css">
-                                        <div class="progress-dot css-dot"></div>
-                                        <div class="progress-dot-value css-value">
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
                                             <span>80%</span>
                                         </div>
                                     </div>
@@ -195,11 +194,10 @@
                             <div class="progress-container">
                                 <div>JavaScript</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress js">
-                                        <div class="progress-dot js-dot"></div>
-                                        <div class="progress-dot-value js-value">
-                                            <span>70%</span>
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
+                                            <span>80%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -207,22 +205,9 @@
                             <div class="progress-container">
                                 <div>React</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress react">
-                                        <div class="progress-dot react-dot"></div>
-                                        <div class="progress-dot-value react-value">
-                                            <span>60%</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-container">
-                                <div>Bootstrap</div>
-                                <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress bootstrap">
-                                        <div class="progress-dot bootstrap-dot"></div>
-                                        <div class="progress-dot-value bootstrap-value">
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
                                             <span>80%</span>
                                         </div>
                                     </div>
@@ -231,11 +216,21 @@
                             <div class="progress-container">
                                 <div>Tailwind</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress tailwind">
-                                        <div class="progress-dot tailwind-dot"></div>
-                                        <div class="progress-dot-value tailwind-value">
-                                            <span>85%</span>
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
+                                            <span>80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-container">
+                                <div>Bootstrap5</div>
+                                <div class="progress-bar">
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
+                                            <span>80%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -243,23 +238,21 @@
                             <div class="progress-container">
                                 <div>Git & Github</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress github">
-                                        <div class="progress-dot github-dot"></div>
-                                        <div class="progress-dot-value github-value">
-                                            <span>70%</span>
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
+                                            <span>80%</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="progress-container">
-                                <div>Adobe photoshop & Illustrator</div>
+                                <div>Adobe Photoshop & Illustrator</div>
                                 <div class="progress-bar">
-                                    <div class="dot"></div>
-                                    <div class="progress photoshop">
-                                        <div class="progress-dot photoshop-dot"></div>
-                                        <div class="progress-dot-value photoshop-value">
-                                            <span>60%</span>
+                                    <div class="progress html">
+                                        <div class="progress-dot html-dot"></div>
+                                        <div class="progress-dot-value html-value">
+                                            <span>80%</span>
                                         </div>
                                     </div>
                                 </div>
@@ -268,15 +261,14 @@
                         <!-- professional skills  -->
                         <div class="professional-skills">
                             <div class="prof-container">
-                                <h3>Professional Skills</h3>
+                                <h5>Professional Skills</h5>
                                 <div class="progress-container">
                                     <div>Communication</div>
                                     <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -284,35 +276,10 @@
                                 <div class="progress-container">
                                     <div>Teamwork & Collaboration</div>
                                     <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="progress-container">
-                                    <div>Creativity</div>
-                                    <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="progress-container">
-                                    <div>Problem-Solving</div>
-                                    <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -320,11 +287,21 @@
                                 <div class="progress-container">
                                     <div>Time Management</div>
                                     <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-container">
+                                    <div>Problem-Solving</div>
+                                    <div class="progress-bar">
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -332,23 +309,10 @@
                                 <div class="progress-container">
                                     <div>Adaptability</div>
                                     <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="progress-container">
-                                    <div>Critical Thinking</div>
-                                    <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -356,11 +320,32 @@
                                 <div class="progress-container">
                                     <div>Work Ethic</div>
                                     <div class="progress-bar">
-                                        <div class="dot"></div>
-                                        <div class="progress tailwind">
-                                            <div class="progress-dot tailwind-dot"></div>
-                                            <div class="progress-dot-value tailwind-value">
-                                                <span>85%</span>
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-container">
+                                    <div>Creativity</div>
+                                    <div class="progress-bar">
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress-container">
+                                    <div>Critical Thinking</div>
+                                    <div class="progress-bar">
+                                        <div class="progress html">
+                                            <div class="progress-dot html-dot"></div>
+                                            <div class="progress-dot-value html-value">
+                                                <span>80%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -384,7 +369,7 @@
                     <div class="card">
                         <img src="/img/Screenshot 1.png" alt="project image">
                         <div class="card-title">
-                            <h3>IT Services Website</h3>
+                            <h4>IT Services Website</h4>
                             <div class="card-description">
                                 <p>This is a modern and responsive IT Services website built to showcase various technology solutions such as web development, software services, cloud support, and IT consultancy. I designed and developed this project using clean and semantic HTML, Tailwind CSS, and React.js. The site reflects a professional layout with user-friendly navigation and service-focused sections, suitable for real-world IT companies.</p>
                             </div>
@@ -404,7 +389,7 @@
                     <div class="card">
                         <img src="/img/fb login page.png" alt="project image">
                         <div class="card-title">
-                            <h3>Facebook login page</h3>
+                            <h4>Facebook login page</h4>
                             <div class="card-description">
                                 <p>A simple and responsive Facebook Login Page clone built using HTML, Tailwind CSS and React.js. This design replicates the original Facebook login interface for learning and UI/UX practice purposes. It was built with attention to layout accuracy, visual consistency, and mobile responsiveness, making it a perfect frontend practice project for UI/UX improvement.</p>
                             </div>
@@ -424,7 +409,7 @@
                     <div class="card">
                         <img src="/img/protfolio.png" alt="project image">
                         <div class="card-title">
-                            <h3>Protfolio Website</h3>
+                            <h4>Protfolio Website</h4>
                             <div class="card-description">
                                 <p>This is a fully responsive and modern portfolio website created to showcase my skills, projects, and services as a Front-End Web Developer. It features a clean design, smooth navigation, and well-organized sections including About Me, My Services, Projects, and Contact. The website is built using HTML5, CSS3, JavaScript (and Tailwind CSS/React if used), and reflects my ability to create real-world, user-friendly web interfaces.</p>
                             </div>
@@ -444,7 +429,7 @@
                     <div class="card">
                         <img src="/img/card-design.png" alt="project image">
                         <div class="card-title">
-                            <h3>Business Card UI Design</h3>
+                            <h4>Business Card UI Design</h4>
                             <div class="card-description">
                                 <p>This is a modern and responsive business card UI design inspired by an online reference. I developed the component using HTML, CSS and React.js, focusing on clean layout, visual hierarchy, and responsive structure. The design represents a personal/corporate identity section that could be used in websites, portfolios, or digital business profiles. It showcases my skills in component-based frontend development and responsive design using utility-first CSS.</p>
                             </div>
@@ -475,21 +460,21 @@
                         <!-- Service 1 -->
                         <div class="service-card">
                             <div class="icon">💻</div>
-                            <h2>Front-end Development</h2>
+                            <h4>Front-end Development</h4>
                             <p> I build responsive websites using HTML, CSS, JavaScript, and modern frameworks like React, Tailwind css and Bootstrap5.</p>
                         </div>
 
                         <!-- Service 2 -->
                         <div class="service-card">
                             <div class="icon">🌐</div>
-                            <h2>WordPress Development</h2>
+                            <h4>WordPress Development</h4>
                             <p>I create and customize WordPress websites for business and blogging.</p>
                         </div>
 
                         <!-- Service 3 -->
                         <div class="service-card">
                             <div class="icon">🎨</div>
-                            <h2>UI/UX Design</h2>
+                            <h4>UI/UX Design</h4>
                             <p>I design clean and modern user interfaces using tools like Figma.</p>
                         </div>
                     </div>
@@ -504,41 +489,16 @@
                 <p>If you have any questions, need advice on a project, or want to know more about my services — feel free to get in touch! Just fill out the form below and send your message. I’ll do my best to respond as soon as possible. Your message is important to me. Thank you!</p>
                 <div class="contact-grid">
                     <!-- contact info  -->
-                    <div class="contact-info">
-                        <!-- number  -->
-                        <div class="contact-number">
-                            <div class="contact-icon">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div class="number">
-                                <span>phone</span>
-                                <p>+88012345678910</p>
-                            </div>
-                        </div>
-                        <!-- gmail  -->
-                        <div class="contact-number">
-                            <div class="contact-icon">
-                               <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div class="number">
-                                <span>gmail</span>
-                                <p>portfolio123@gmail.com</p>
-                            </div>
-                        </div>
-                        <!-- address  -->
-                        <div class="contact-number">
-                            <div class="contact-icon">
-                               <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div class="number">
-                                <span>address</span>
-                                <p>Dhaka, Bangladesh</p>
-                            </div>
-                        </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d47016.2229664686!2d89.68936542983752!3d24.463491526522855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1751793401527!5m2!1sen!2sbd"  
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     
                     <!-- contact form  -->
                     <div class="form-container">
+                        <div class="message-icon">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
                         <form class="contact-form" action="#" method="POST">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -565,12 +525,12 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
-                    <h3>Web Roots</h3>
+                    <h6>Web Roots</h6>
                     <p>Passionate front-end developer crafting beautiful & functional websites. Let's build something great together.</p>
                 </div>
                 <!-- footer link  -->
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h6>Quick Links</h6>
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#services">Services</a></li>
@@ -580,21 +540,21 @@
                 </div>
                 <!-- footer contact  -->
                 <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Email: you@example.com</p>
-                    <p>Phone: +880123456789</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    <h6>Contact</h6>
+                    <div class="call">
+                        <div><i class="fa-solid fa-phone"></i></div>
+                        <p>+880123456789</p>
+                    </div>
+                    <div class="call">
+                        <div><i class="fa-solid fa-envelope"></i></div>
+                        <p>abcd111@gmail.com</p>
                     </div>
                 </div>
                 <!-- footer copy right  -->
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Web Roots. All rights reserved.</p>
-            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Web Roots. All rights reserved.</p>
         </div>
     </footer>
 
