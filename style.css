@@ -7,17 +7,30 @@
     --text-color: #eed603e0;
     --hover-color: #ffe604;
     --font-family: 'Segoe UI', sans-serif;
+    --small-font-size: 0.875rem;
     --font-size: 1.063rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* computer device font size */
-h1 { font-size: 2.5rem; /* ≈40px */ }
-h2 { font-size: 2rem;   /* ≈32px */ }
-h3 { font-size: 1.75rem; /* ≈28px */ }
-h4 { font-size: 1.5rem; /* ≈24px */ }
-h5 { font-size: 1.25rem; /* ≈20px */ }
-h6 { font-size: 1.125rem; /* ≈18px */ }
-p { font-size: 1.063rem;    /* ≈17px */ }
+h1 { font-size: 5rem; /* ≈80px */ }
+h2 { font-size: 2.5rem;   /* ≈40px */ }
+h3 { font-size: 2rem ; /* ≈32px */ }
+h4 { 
+    font-size: 1.75rem; /* ≈28px */ 
+    text-align: center;
+    padding: 20px;
+}
+h5 { 
+    font-size: 1.5rem; /* ≈24px */ 
+
+}
+h6 { font-size: 1.25rem; /* ≈20px */ }
+p { font-size: 1.125rem;    /* ≈18px */ }
 
 *{
     box-sizing: border-box;
@@ -35,21 +48,23 @@ body{
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  /* background-color: green; */
+  height: 100%;
 }
+.about, .skills, .projects, .services, .contact {
+    min-height: 740px;
+    padding: 50px 0;
+}
+
 h2 {
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
-h5 {
-    text-align: center;
-}
-p {
+h2 + p {
     text-align: justify;
-    line-height: 1.3;
-    
+    line-height: 1.2;
+    padding: 50px 0 100px 0;
 }
 a {
     text-decoration: none;
@@ -68,7 +83,7 @@ a {
     padding: 20px 0;
 }
 #header .navbar .logo > h1 {
-    font-size: clamp(20px, 3vw, 40px);
+    font-size: clamp(32px, 3vw, 50px);
     font-weight: bold;
     cursor: pointer;
 }
@@ -103,7 +118,7 @@ a {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    font-size: clamp(16px, 3vw, 24px);
+    font-size: clamp(22px, 3vw, 32px);
     font-weight: bold;
 }
 #header .hire-me button:hover {
@@ -114,53 +129,58 @@ a {
 /* ====================== hero section start ===================== */
 /* left side content */
 #hero .hero-items-container {
-    /* width: 100%;
-    height: 100%; */
-    margin: 10px 0 0 0;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 50px;
 }
 #hero .left-content{
     height: 100%;
     width: 100%;
 }
 #hero .left-side h1 {
-    padding-top: 80px;
-    font-size: 80px;
+    padding-top: 100px;
     text-transform: uppercase;
     line-height: 1.2;
 }
-#hero .left-side h3 {
-    font-size: 30px;
-    margin: 50px 0 80px 0;
+#hero .left-side h4 {
+    margin: 50px 0 50px 0;
     text-transform: capitalize;
 }
-#hero .btn{
-    color: var(--text-color);
-    font-size: 1.125rem;
-    font-weight: bold;
-    border: 1px solid var(--text-color);
-    background-color: transparent;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    margin-right: 20px;
+.left-content .hero-icons{
+    display: none;
 }
-#hero .left-side .btn:hover {
+#hero .btn{
+    padding: 5px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+#hero .btn button{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block;
+    color: var(--text-color);
+    font-size: 20px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    transition: background-color 0.5s ease;
+}
+#hero .left-side .btn button:hover {
     background-color: var(--hover-color);
     color: black;
 }
 
 /* right side content */
-#hero .right-side .right-content {
+#hero .right-side{
+    width: 55%;
     display: flex;
     justify-content: space-between;
 }
 #hero .right-side .image{
-    width: 100%;
-    height: 700px;
     position: relative;
+    width: 90%;
 }
 #hero .image img {
     object-fit: cover;
@@ -177,17 +197,25 @@ a {
     pointer-events: none;
 }
 #hero .hero-social-icons{
-    /* background-color: blue; */
     display: flex;
     align-items: center;
 }
-#hero .hero-social-icons > div {
+#hero .hero-social-icons .hero-icon-grid{
     display: flex;
     flex-direction: column;
+    gap: 15px;
+}
+#hero .hero-icon-grid div {
+    border-radius: 50%;
     text-align: center;
-    gap: 20px;
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+#hero .hero-icon-grid div:hover {
+    background-color: var(--primary-bg-color);
 }
 #hero .hero-social-icons i {
+    padding: 10px;
     font-size: 30px;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -199,24 +227,19 @@ a {
 /* ====================== about section start ===================== */
 #about {
     width: 100%;
-    /* height: 740px; */
-    padding: 60px 0 0 0;
 }
 #about .personal-details {
-    font-size: 20px;
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
-    padding-top: 40px;
 }
-/* details part one */
+/* personal information part one */
 #about .details-part-one {
     min-width: 45%;
-    padding: 10px 0;
 }
 #about .details-container {
     margin: 20px 0 0 0;
-    line-height: 1.6;
+    line-height: 1.3;
     font-size: var(--font-size);
     display: flex;
     justify-content: space-between;
@@ -225,10 +248,9 @@ a {
     padding: 0;
     list-style: none;
 }
-/* details part tow  */
+/* personal information part tow  */
 #about .my-interests {
     width: 45%;
-    padding: 10px 0;
 }
 
 #about .my-interests .icon {
@@ -240,7 +262,7 @@ a {
     font-size: var(--font-size);
 }
 #about .my-interests .icon i {
-    font-size: var(--font-size);
+    font-size: 24px;
     cursor: pointer;
     transition: color 0.3s ease;
     text-align: center;
@@ -255,13 +277,12 @@ a {
 }
 /* ====================== skills section start ===================== */
 /*  technical skills */
-#skills .skills-content {
-    margin: 60px 0 0 0;
+#skills .skills-wrapper {
+    
 }
 #skills .tech-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 30px;
     font-size: var(--font-size);
 }
 #skills .technical-skills {
@@ -269,8 +290,7 @@ a {
 }
 #skills .progress-container {
     width: 100%;
-    margin-top: 10px;
-    padding: 6px;
+    padding: 5px 0;
     overflow: hidden;
     font-size: var(--font-size);
 }
@@ -283,20 +303,20 @@ a {
     margin: 10px 0;
     position: relative;
 }
-#skills .progress-bar .progress {
+#skills .progress {
     height: 100%;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-#skills .progress .progress-dot {
+#skills .progress-dot {
     width: 10px;
     height: 10px;
     background-color: #ffffff;
     border-radius: 50%;
 }
-#skills .progress .progress-dot-value {
+#skills .progress-dot-value {
     padding: 0 10px;
     background-color: #ffffff;
     border-radius: 20px;
@@ -304,18 +324,18 @@ a {
     font-size: var(--font-size);
 }
 #skills .html{
-    background-color: var(--progress-color-on);
     width: 80%;
+    background-color: var(--text-color);
 }
 #skills .html .html-value {
-    border: 3px solid var(--progress-color-on);
+    border: 3px solid var(--text-color);
 }
 #skills .html-dot{
-    border: 7px solid var(--progress-color-on); 
+    border: 7px solid var(--text-color);
 }
 /* professional skills */
 #skills .professional-skills {
-    min-width: 45%;
+    width: 45%;
 }
 #skills .prof-container {
     width: 100%;
@@ -323,28 +343,19 @@ a {
 }
 
 /* ====================== project section start ===================== */
-#projects{
-    padding: 60px 0 0 0;
-}
 #projects .card-conteinar{
-    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     row-gap: 40px;
+    justify-content: space-between;
 }
+
 #projects .card{
     padding: 20px;
     width: 360px;
     overflow: hidden;
     border-radius: 10px;
     background-color: var(--bg-color);
-}
-#projects .card-btn {
-    padding: 30px 0 0 0;
-    display: flex;
-    gap: 30px;
-    font-weight: bold;
 }
 #projects .card img{
     width: 100%;
@@ -359,13 +370,15 @@ a {
     overflow-y: auto;
     height: 80px;
     scrollbar-width: thin;
+    scrollbar-color: var(--bg-color) var(--primary-bg-color);
 }
 #projects .card-description p{
     width: 98%;
 }
 #projects .use-tech {
-    display: inline-block;
+    /* display: inline-block; */
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     padding-top: 30px;
 }
@@ -374,6 +387,13 @@ a {
     background-color: var(--primary-bg-color);
     border-radius: 20px;
     text-align: center;
+}
+#projects .card-btn {
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    font-weight: bold;
 }
 #projects .card-btn a:first-child{
     background-color: var(--primary-bg-color);
@@ -402,11 +422,7 @@ a {
 }
 
 /* ====================== services section start ===================== */
-#services{
-    padding: 60px 0 0 0;
-}
 #services .service-grid{
-    padding: 50px 0 0 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -432,16 +448,11 @@ a {
     text-align: justify;
 }
 /* ====================== contact section start ===================== */
-#contact{
-    padding: 60px 0 0 0;
-}
 .contact-grid{
-    margin: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 600px;
 }
 /* contact info */
 #contact .map-container{
@@ -527,7 +538,7 @@ a {
     padding: 60px 20px 20px;
     background-color: var(--bg-color);
 }
-.footer-container {
+.footer-wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -564,5 +575,6 @@ a {
 }
 .footer-bottom > p{
     text-align: center;
+    font-size: var(--small-font-size);
 }
 /* ====================== The End ===================== */

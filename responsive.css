@@ -6,26 +6,18 @@
     --main-bg-color: rgb(3, 0, 10);
     --hover-color: #ffe604;
     --font-family: 'Segoe UI', sans-serif;
-    
-    --progress-color-on: #ffe604;
-    --progress-color-tow: #c9b500;
-    --html-width: 80%;
-    --css-width: 80%;
-    --js-width: 70%;
-    --react-width: 60%;
-    --bootstrap-width: 80%;
-    --tailwind-width: 85%;
-    --github-width: 70%;
-    --photoshop-width: 60%;
 
     /* mobile device font size */
-    --h1-font-size: 2rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --h4-font-size: 1.125rem;
-    --h5-font-size: 1rem;
-    --h6-font-size: 0.875rem;
-    --p-font-size: 0.875rem;
+    --h1-font-size: 3rem; 
+    --h2-font-size: 2rem; 
+    --h3-font-size: 1.5rem;  
+    --h4-font-size: 1.25rem;
+    --h5-font-size: 1.125rem; 
+    --h6-font-size: 1rem;
+
+    --p-font-size: 1rem;
+    --small-font-size: 0.875rem; /* 14px */
+    /* --p-font-size: 1.125rem; */
 
     /* line height  */
     --line-height: 1.4;
@@ -33,8 +25,6 @@
   }
 
 
-  /* end  */
-  
 
 /*========== Styles for phones ========== */
 @media screen and (max-width: 768px) {
@@ -48,9 +38,10 @@
   #header .navbar ul{
     display: none;
     position: absolute;
-    top: 80px;
+    top: 90px;
     left: 0;
     width: 100%;
+    z-index: 999;
     padding: 0 var(--padding);
     background-color: var(--secondary-bg-color);
   }
@@ -73,37 +64,88 @@
 
   /*========== hero section ========== */
   #hero{
-    color: var(--primary-color);
-    width: 100vw;
+    background-image: url('img/limon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
   }
-  #hero .items {
-    display: block;
-    width: 100vw;
-    padding: var(--padding);
-  }
-  #hero .items .left-side{
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    align-items: flex-start;
+    height: 100%;
+    background: linear-gradient(to top, rgb(81, 74, 57), transparent);
+    pointer-events: none;
   }
-  #hero .items .left-side h1 {
-    font-size: var(--h1-font-size);
+  #hero .hero-items-container {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  #hero .left-side{
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px 20px 20px;
+  }
+  #hero .left-side h1 {
     text-transform: uppercase;
     line-height: var(--line-height);
+    font-size: var(--h1-font-size);
   }
-  #hero .items .left-side h3 {
-    font-size: var(--h3-font-size);
-    margin: 50px 0 80px 0;
+  #hero .left-side h4 {
+    font-size: var(--h4-font-size);
+    text-align: start;
     text-transform: capitalize;
+    color: var(--primary-color);
+    padding: 0;
+  }
+  #hero .hero-icons{
+    display: block;
+    margin: 40px 0;
+  }
+  #hero .hero-icon-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  #hero .hero-icon-grid div i{
+    padding: 10px;
+    font-size: 22px;
+  }
+  #hero .btn{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  #hero .btn button {
+    font-size: 18px;
+    width: 40%;
+    border: 1px solid var(--hover-color);
+    padding: 10px;
+    color: var(--primary-color);
   }
   /* right side  */
-  #hero .items .right-side{
+  #hero .right-side{
+    display: none;
+    /* width: 0; */
+  }
+  #hero .right-side img {
     display: none;
   }
-  #hero .items .right-side img {
+  #hero .image .fade-overlay {
     display: none;
   }
-  
+
   /*========== about section ========== */
   #about {
     width: 100%;
@@ -111,7 +153,7 @@
     padding: 60px 0 0 0;
   }
   #about .about-title h2 {
-    font-size: var(--h3-font-size);
+    font-size: var(--h2-font-size);
   }
   #about .about-title p {
     font-size: var(--p-font-size);
@@ -128,7 +170,7 @@
     width: 100%;
     padding: 0;
   }
-  #about .details-part-one h3{
+  #about .details-part-one h4{
     font-size: var(--h4-font-size);
   }
   #about .details-container {
@@ -146,7 +188,7 @@
     width: 100%;
     padding: var(--padding);
   }
-  #about .my-interests h3{
+  #about .my-interests h4{
     font-size: var(--h4-font-size);
   }
   #about .my-interests .icon {
@@ -172,9 +214,9 @@
     display: block;
     padding-top: 0;
   }
-  #skills .technical-skills h3 {
+  #skills .technical-skills h4 {
     padding: 0;
-    font-size: var(--h3-font-size);
+    font-size: var(--h4-font-size);
   }
   #skills .progress-container {
     margin-top: 20px;
@@ -188,8 +230,8 @@
     width: 100%;
     margin-top: 40px;
   }
-  #skills .prof-container h3 {
-    font-size: var(--h3-font-size);
+  #skills .prof-container h4 {
+    font-size: var(--h4-font-size);
     padding: 0;
   }
 
@@ -209,8 +251,8 @@
   #projects .card{
     width: 100%;
   }
-  #projects .card-title h3{
-    font-size: var(--h3-font-size);
+  #projects .card-title h5{
+    font-size: var(--h5-font-size);
   }
   #projects .card-description p{
     width: 100%;
@@ -237,8 +279,8 @@
     width: 100%;
     padding: var(--padding);
   }
-  #services .service-card h2{
-    font-size: var(--h3-font-size);
+  #services .service-card h5{
+    font-size: var(--h5-font-size);
   }
   #services .service-card p{
     font-size: var(--p-font-size);
@@ -270,6 +312,7 @@
     width: 100%;
     margin-top: 20px;
   }
+
 }
 /* end  */
 
