@@ -128,7 +128,7 @@
     justify-content: space-between;
   }
   #hero .btn button {
-    font-size: 18px;
+    font-size: 1em;
     width: 40%;
     border: 1px solid var(--hover-color);
     padding: 10px;
@@ -219,7 +219,6 @@
     font-size: var(--h4-font-size);
   }
   #skills .progress-container {
-    margin-top: 20px;
     font-size: var(--p-font-size);
   }
   #skills .technical-skills {
@@ -243,7 +242,7 @@
   }
   #projects .project-title p{
     font-size: var(--p-font-size);
-    padding: var(--padding);
+    padding: var(--padding); 
   }
   #projects .card-conteinar{
     padding: var(--padding);
