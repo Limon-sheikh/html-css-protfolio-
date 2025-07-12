@@ -312,6 +312,11 @@
     margin-top: 20px;
   }
 
+  .naviget-btn {
+    display: none;
+  }
+
+
 }
 /* end  */
 
