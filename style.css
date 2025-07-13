@@ -208,19 +208,16 @@ a{
     text-transform: uppercase;
     line-height: 1.2;
 }
-#hero .left-content .typewriter {
-    font-weight: bold;
-}
 #hero .typewriter:hover {
   animation-play-state: paused;
 }
 #hero .left-side h4 {
-    font-size: clamp(18px, 3vw, 25px);
-    margin: 50px 0 50px 0;
-    text-transform: capitalize;
+    width: 95%;
     display: flex;
     gap: 10px;
-    
+    margin: 50px 0 50px 0;
+    text-transform: capitalize;
+    font-size: clamp(18px, 3vw, 25px);
 }
 .left-content .hero-icons{
     display: none;
@@ -233,22 +230,26 @@ a{
     margin-top: 80px;
 }
 #hero .btn button{
-    padding: 8px 15px;
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
     display: block;
-    color: var(--text-color);
     font-size: 20px;
+    text-decoration: none;
+    color: var(--text-color);
     background-color: transparent;
     border: 1px solid var(--text-color);
-    transition: background-color 0.5s ease;
+}
+#hero .btn a{
+    transition: all 0.4s ease-in-out;
+    padding: 8px 15px;
+    display: inline-block;
 }
 #hero .btn button:last-child:hover i{
     transform: rotateX(360deg);
     transition: 1s;
 }
-#hero .left-side .btn button:hover {
+#hero .left-side .btn a:hover {
     background-color: var(--hover-color);
     color: black;
 }

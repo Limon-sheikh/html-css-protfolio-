@@ -100,12 +100,10 @@
     font-size: var(--h1-font-size);
   }
   #hero .left-side h4 {
-    /* font-size: 18px; */
     text-align: start;
     text-transform: capitalize;
     color: var(--primary-color);
-    padding: 0;
-    width: 100%;
+    width: 85%;
   }
   #hero .hero-icons{
     display: block;
