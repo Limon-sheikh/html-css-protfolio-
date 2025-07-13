@@ -36,11 +36,11 @@ h2 {
 h3 {
     font-size: 2rem ;
 }
-h4 { 
+/* h4 { 
     font-size: 1.75rem;
     text-align: center;
     padding-bottom: 20px;
-}
+} */
 h5 { 
     font-size: 1.5rem; 
 }
@@ -158,7 +158,7 @@ a{
 }
 .hire-btn a {
     position: relative;
-    padding: 15px 20px;
+    padding: 10px 15px;
     border: 1px solid var(--text-color);
     display: inline-block;
     z-index: 1;
@@ -196,6 +196,9 @@ a{
     justify-content: space-between;
     padding-bottom: 50px;
 }
+#hero .left-side{
+    width: 50%;
+}
 #hero .left-content{
     height: 100%;
     width: 100%;
@@ -205,9 +208,19 @@ a{
     text-transform: uppercase;
     line-height: 1.2;
 }
+#hero .left-content .typewriter {
+    font-weight: bold;
+}
+#hero .typewriter:hover {
+  animation-play-state: paused;
+}
 #hero .left-side h4 {
+    font-size: clamp(18px, 3vw, 25px);
     margin: 50px 0 50px 0;
     text-transform: capitalize;
+    display: flex;
+    gap: 10px;
+    
 }
 .left-content .hero-icons{
     display: none;
@@ -277,15 +290,15 @@ a{
     border-radius: 50%;
     text-align: center;
     background-color: var(--bg-color);
-    transition: background-color 0.3s ease;
+    transition:  0.3s ease;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.247);
 }
-#hero .hero-social-icons i {
+#hero .hero-icon-grid i {
     padding: 10px;
     font-size: 30px;
     cursor: pointer;
 }
-#hero .hero-social-icons i:hover {
+#hero .hero-icon-grid div:hover i {
     color: var(--hover-color);
     transform: rotateY(360deg);
     transition: 1s;
@@ -331,12 +344,11 @@ a{
 #about .my-interests .icon i {
     font-size: 28px;
     cursor: pointer;
-    transition: color 0.3s ease;
     text-align: center;
+    transition: color 0.3s ease;
 }
-#about .my-interests .icon i:hover {
-    color: var(--hover-color);
-    transform: rotateY(360deg);
+#about .my-interests .lable:hover i{
+    transform: rotate(360deg);
     transition: 1s;
 }
 #about .my-interests .lable {
@@ -372,15 +384,16 @@ a{
 #skills .progress {
     height: 100%;
     border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 #skills .progress-dot {
     width: 10px;
     height: 10px;
     background-color: #ffffff;
     border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #skills .progress-dot-value {
     padding: 0 10px;
@@ -388,6 +401,10 @@ a{
     border-radius: 20px;
     color: black;
     font-size: var(--font-size);
+    position: absolute;
+    left: 80%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 #skills .html{
     width: 80%;
@@ -415,61 +432,14 @@ a{
     row-gap: 40px;
     justify-content: space-between;
 }
-/* animation */
-#projects .card{
-    padding: 20px;
-    width: 360px;
-    position: relative;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    background-color: var(--bg-color);
-    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
-}
-.card::after, .card::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    padding: 5px;
-    border-radius: 10px;
-    background-image: conic-gradient(from var(--angle), transparent 70%, var(--text-color));
-    animation: 4s spin linear infinite;
-    }
-    .card::before{
-        filter: blur(1.2rem );
-        opacity: 0.5;
-    }
-    
-    @property --angle{
-      syntax: "<angle>";
-      initial-value: 0deg;
-      inherits: false;
-    }
-    @keyframes spin {
-      from{
-        --angle:0deg;
-      }
-      to{
-        --angle:360deg;
-      }
-    }
-/* end  */
 
-/* #projects .card:hover {
-    transform: scale(1.02);
-    transition: 0.3s;
-} */
 #projects .card img{
     width: 100%;
     object-fit: cover;
 }
 #projects .card-title{
     padding-top: 5px;
-   
+    
 }
 #projects .card-description{
     margin-top: 10px;
@@ -501,6 +471,10 @@ a{
     gap: 30px;
     font-weight: bold;
 }
+/* #projects .card:hover {
+    transform: scale(1.02);
+    transition: 0.3s;
+} */
 #projects .card-btn a:first-child{
     background-color: var(--primary-bg-color);
     text-decoration: none;
@@ -541,11 +515,11 @@ a{
     padding: 20px;
     background-color: var(--bg-color);
     box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 #services .service-card:hover {
     transform: scale(1.02);
-    transition: 0.3s;
+    transition: 0.2s;
 }
 #services .service-card .icon{
     font-size: 50px;
@@ -584,13 +558,14 @@ a{
 #contact .form-container{
     width: 45%;
     height: 550px;
-    background-color: var(--bg-color);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: 0.3s;
+    background-color: var(--bg-color);
     box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
+    transition: 0.
+    3s;
 }
 /* #contact .form-container:hover {
     transform: scale(1.02);
@@ -626,7 +601,7 @@ a{
     width: 100%;
     padding: 12px;
     border: 1px solid #dbb22bce;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: var(--font-size);
     transition: 0.3s ease;
     background-color: transparent;
@@ -700,9 +675,10 @@ a{
     gap: 10px;
     font-size: var(--font-size);
     margin: 0 0 10px 0 ;
-}
-.footer-contact i:hover{
     cursor: pointer;
+}
+
+.footer-contact .call:hover i{
     color: var(--hover-color);
     transform: rotateY(360deg);
     transition: 1s;
@@ -720,6 +696,7 @@ a{
     font-size: var(--small-font-size);
 }
 
+/* navigator button  */
 .naviget-btn a {
     position: absolute;
     position: fixed;
@@ -735,7 +712,7 @@ a{
     background-color: var(--text-color);
     font-weight: bold;
     color: var(--bg-color);
-    /* transition: 0.5s ease; */
+    transition: 0.3s ease;
 }
 .naviget-btn i {
     font-size: 30px;
