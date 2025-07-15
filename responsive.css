@@ -8,7 +8,6 @@
     --font-family: 'Segoe UI', sans-serif;
 
     /* mobile device font size */
-    --h1-font-size: 3rem; 
     --h2-font-size: 2rem; 
     --h3-font-size: 1.5rem;  
     --h4-font-size: 1.25rem;
@@ -17,16 +16,14 @@
 
     --p-font-size: 1rem;
     --small-font-size: 0.875rem; /* 14px */
-    /* --p-font-size: 1.125rem; */
-
-    /* line height  */
     --line-height: 1.4;
     --padding: 20px;
   }
 
-
-
 /*========== Styles for phones ========== */
+
+
+
 @media screen and (max-width: 768px) {
 /* header ara  */
   #header .navbar {
@@ -34,6 +31,7 @@
   }
   #header .navbar .menu-icon{
     display: block;
+    font-size: 28px;
   }
   #header .navbar ul{
     display: none;
@@ -71,7 +69,7 @@
     position: relative;
     overflow: hidden;
   }
-  .hero::after {
+  #hero::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -97,17 +95,18 @@
   #hero .left-side h1 {
     text-transform: uppercase;
     line-height: var(--line-height);
-    font-size: var(--h1-font-size);
+    font-size: 3rem;
   }
   #hero .left-side h4 {
     text-align: start;
     text-transform: capitalize;
     color: var(--primary-color);
-    width: 85%;
+    width: 100%;
   }
+
   #hero .hero-icons{
     display: block;
-    margin: 40px 0;
+    margin-top: 6em;
   }
   #hero .hero-icon-grid{
     display: flex;
@@ -124,19 +123,17 @@
     width: 100%;
     margin-top: 30px;
     display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
     justify-content: space-between;
   }
-  #hero .btn button {
-    font-size: 1em;
-    width: 40%;
-    border: 1px solid var(--hover-color);
-    padding: 10px;
-    color: var(--primary-color);
+  #hero .btn a{
+    padding: 5px;
   }
+ 
   /* right side  */
   #hero .right-side{
     display: none;
-    /* width: 0; */
   }
   #hero .right-side img {
     display: none;

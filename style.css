@@ -16,7 +16,7 @@
     padding: 0; 
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body{
     font-family: var(--font-family);
@@ -27,23 +27,9 @@ body{
 }
 
 /* computer device font size */
-h1 { 
-    font-size: 5rem;
-}
-h2 {
-    font-size: 2.5rem;
-}
-h3 {
-    font-size: 2rem ;
-}
-/* h4 { 
-    font-size: 1.75rem;
-    text-align: center;
-    padding-bottom: 20px;
-} */
-h5 { 
-    font-size: 1.5rem; 
-}
+
+h3 {font-size: 2rem ;}
+h5 {font-size: 1.5rem;}
 h6 {
     font-size: 1.25rem;
     margin-bottom: 15px;
@@ -55,21 +41,24 @@ h6 {
   padding: 0 20px;
   height: 100%;
 }
-.about, .skills, .projects, .services, .contact {
-    min-height: 740px;
-    padding: 50px 0;
+#hero, .about, .skills, .projects, .services, .contact {
+    /* min-height: 740px; */
+    /* padding: 50px 0; */
+    padding-bottom: 180px;
+    scroll-margin-top: 115px;
 }
 
 h2 {
     text-transform: uppercase;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
 }
 h2 + p {
     text-align: justify;
     line-height: 1.2;
-    padding: 50px 0 100px 0;
+    padding: 40px 0;
 }
 a{
     text-decoration: none;
@@ -79,7 +68,7 @@ a{
 /* ====================== header area ===================== */
   #header {
     width: 100%;
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 9999;
     background-color: var(--bg-color);
@@ -88,7 +77,6 @@ a{
 #header .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 0;
 }
 #header .navbar .logo > h1 {
@@ -96,7 +84,7 @@ a{
     font-weight: bold;
     cursor: pointer;
 }
-#header .navbar .logo > h1:hover {
+#header .navbar .logo:hover h1 {
     transform: rotateY(360deg);
     transition: 1s;
 }
@@ -137,19 +125,12 @@ a{
     color: var(--hover-color);
 }
 /* Hamburger Menu Toggle  */
-#menu-checkbox{
+#header .menu-icon, #header #menu-checkbox {
     display: none;
-}
-#header .navbar .menu-icon{
-    font-size: 40px;
-    cursor: pointer;
-    display: none;
-    padding: 0;
 }
 /* hire me btn  */
 .hire-btn {
     position: relative;
-    font-size: 24px;
     background-color: transparent;
     text-transform: capitalize;
     font-weight: bold;
@@ -157,15 +138,16 @@ a{
     transition: color 0.4s ease-in-out;
 }
 .hire-btn a {
+    font-size: clamp(16px, 3vw, 28px);
     position: relative;
-    padding: 10px 15px;
+    padding: 0.3em 0.7em;
     border: 1px solid var(--text-color);
+    border-radius: 8px;
     display: inline-block;
-    z-index: 1;
-    overflow: hidden;
 }
 .hire-btn a::before {
     content: '';
+
     position: absolute;
     top: 0;
     left: 0;
@@ -203,10 +185,10 @@ a{
     height: 100%;
     width: 100%;
 }
-#hero .left-side h1 {
-    padding-top: 100px;
+#hero .left-content h1 {
+    padding-top: 80px;
     text-transform: uppercase;
-    line-height: 1.2;
+    font-size: 5rem;
 }
 #hero .typewriter:hover {
   animation-play-state: paused;
@@ -217,7 +199,7 @@ a{
     gap: 10px;
     margin: 50px 0 50px 0;
     text-transform: capitalize;
-    font-size: clamp(18px, 3vw, 25px);
+    font-size: clamp(14px, 4vw, 28px);
 }
 .left-content .hero-icons{
     display: none;
@@ -233,8 +215,7 @@ a{
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    display: block;
-    font-size: 20px;
+    font-size: clamp(14px, 3vw, 18px);
     text-decoration: none;
     color: var(--text-color);
     background-color: transparent;
@@ -242,7 +223,9 @@ a{
 }
 #hero .btn a{
     transition: all 0.4s ease-in-out;
-    padding: 8px 15px;
+    padding: 0.6em 0;
+    width: 9em;
+    text-align: center;
     display: inline-block;
 }
 #hero .btn button:last-child:hover i{
@@ -368,7 +351,10 @@ a{
 #skills .tech-container {
     display: flex;
     justify-content: space-between;
-    font-size: var(--font-size);
+}
+#skills .tech-container h4{
+    text-align: center;
+    font-size: 24px;
 }
 #skills .technical-skills {
     min-width: 50%;
@@ -541,17 +527,19 @@ a{
     text-align: justify;
 }
 /* ====================== contact section start ===================== */
+#contact {
+    /* background-color: orange; */
+}
 .contact-grid{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
 }
 /* contact info */
 #contact .map-container{
     text-align: center;
     width: 45%;             
-    height: 550px;
 }
 #contact .map-container iframe{
     width: 100%;
@@ -564,7 +552,6 @@ a{
 /* contact form  */
 #contact .form-container{
     width: 45%;
-    height: 550px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
