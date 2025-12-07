@@ -77,10 +77,10 @@ a{
 #header .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 15px 0;
 }
 #header .navbar .logo > h1 {
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: clamp(20px, 3vw, 32px);
     font-weight: bold;
     cursor: pointer;
 }
