@@ -21,9 +21,6 @@
   }
 
 /*========== Styles for phones ========== */
-
-
-
 @media screen and (max-width: 768px) {
 /* header ara  */
   #header .hire-btn {
@@ -35,32 +32,37 @@
   #header .navbar .menu-icon{
     display: block;
     font-size: 35px;
+    cursor: pointer;
   }
   #header .navbar ul{
     display: none;
     position: absolute;
-    top: 75px;
+    top: 88px;
     left: 0;
     width: 100%;
-    z-index: 999;
     padding: 0 var(--padding);
     background-color: var(--secondary-bg-color);
   }
-  #header .navbar ul li{
-    margin: 15px 0;
+  #header .navbar ul .hireButton{
+    margin-top: 30px;
+
+  }#header .navbar ul .hireButton > a{
+    font-size: 22px;
   }
+
   #header .navbar ul li a{
-    background-color: var(--secondary-sub-bg-color);
+    /* background-color: var(--secondary-sub-bg-color); */
     text-align: center;
     display: inline-block;
-    width: 100%;
-    border-radius: 10px;
+    padding: 10px 20px;
     font-size: var(--p-font-size);
   }
   /* Show menu when checkbox is checked */
   #menu-checkbox:checked + .menu-icon + ul {
-    display: block;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 20px 0;
   }
 
   /*========== hero section ========== */
