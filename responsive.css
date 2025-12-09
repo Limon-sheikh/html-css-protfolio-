@@ -37,7 +37,7 @@
   #header .navbar ul{
     display: none;
     position: fixed;
-    top: 84px;
+    top: 82px;
     left: 0;
     width: 100%;
     padding: 0 var(--padding);
